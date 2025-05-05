@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu - Cake Shop</title>
+<style>
+    /* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff5f8;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Navbar Styling */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff4d6d;
+    padding: 15px 30px;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 0.8s ease-in-out;
+}
+
+.navbar h1 {
+    font-size: 24px;
+    font-weight: bold;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+/* Navbar Menu */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.nav-menu li {
+    margin: 0 15px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+.nav-menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s, transform 0.3s;
+}
+
+/* Navbar Hover Animation */
+.nav-menu li a:hover {
+    color: #ffcad4;
+    transform: scale(1.1);
+}
+
+/* Menu Section */
+.menu {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+.menu h1 {
+    color: #ff4d6d;
+    margin-bottom: 20px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards;
+}
+
+/* Menu Items Grid */
+.menu-item {
+    display: inline-block;
+    width: 250px;
+    margin: 15px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    opacity: 0;
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* Hover Effect with Animation */
+.menu-item:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Animation */
+.menu-item img {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    transition: transform 0.4s ease-in-out;
+}
+
+/* Image Hover Effect */
+.menu-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Menu Item Text */
+.menu-item p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+    margin-top: 10px;
+    transition: color 0.3s;
+}
+
+/* Menu Item Text Hover */
+.menu-item:hover p {
+    color: #ff4d6d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .nav-menu {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .nav-menu li {
+        margin: 10px 0;
+    }
+
+    .menu {
+        width: 90%;
+    }
+
+    .menu-item {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Cake Shop</h1>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('order') }}">Order</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="menu">
+        <h1>Our Menu</h1>
+
+
+    
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.Oivhh2gAHK3ZjB3AlrGt3wHaIu?w=195&h=230&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Chocolate Cake">
+            <p>🍫 Chocolate Cake 150</p>
+        </div>
+    
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OPAC.7NN2foBh7QghDQ474C474?w=187&h=243&o=5&dpr=1.1&pid=1.7" alt="Vanilla Cake">
+            <p>🍦 Vanilla Cake 200</p>
+        </div>
+    
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.wUtTLR_VoBqU-JhR89yfzQHaJ6?w=195&h=261&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Strawberry Cake">
+            <p>🍓 Strawberry Cake  190</p>
+        </div>
+    
+        <div class="menu-item">
+            <img src="https://ts4.mm.bing.net/th?id=OIP.b8tYTlUpcHaCikpu-i5kiwHaHa&pid=15.1" alt="Red Velvet Cake">
+            <p>🎂 Red Velvet Cake 220</p>
+        </div>
+    
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.AdgqnowUvNRqcvhhFoLrzwHaLH?w=195&h=358&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Black Forest Cake">
+            <p>🌲 Black Forest Cake 100</p>
+        </div>
+    
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.7h-WYHzd2CLlstNP6UTFugHaJ4?w=195&h=260&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Pineapple Cake">
+            <p>🍍 Pineapple Cake 120</p>
+        </div>
+    
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.DbsdZ6Mo8q5-hi75OtlKfQHaHa?w=196&h=195&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Butterscotch Cake">
+            <p>🧈 Butterscotch Cake 150</p>
+        </div>
+    
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.Q70uYJBKqBMu3ihvNE7_qgHaHa?w=195&h=195&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Mango Cake">
+            <p>🥭 Mango Cake 220</p>
+        </div>
+    
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.twfPzQlPBwuCkEh32aSSigHaKX?w=195&h=273&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Blueberry Cake">
+            <p>🫐 Blueberry Cake 110</p>
+        </div>
+    
+        <div class="menu-item">
+            <img src="https://th.bing.com/th/id/OIP.Ai3P86Hy4KnHsHV13xOoggHaHa?w=195&h=195&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Coffee Cake">
+            <p>☕ Coffee Cake 130</p>
+        </div>
+    </section>
+    
+</body>
+</html>

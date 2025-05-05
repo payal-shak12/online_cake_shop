@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Cake Shop</title>
+<style>/* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff5f8;
+        text-align: center;
+    }
+    
+    /* Navbar Styling */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ff4d6d;
+        padding: 15px 30px;
+        color: white;
+    }
+    
+    .navbar .logo {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    
+    .nav-menu li {
+        margin: 0 15px;
+    }
+    
+    .nav-menu li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    
+    .nav-menu li a:hover {
+        color: #ffcad4;
+    }
+    
+    /* Contact Section */
+    .contact {
+        padding: 50px 20px;
+    }
+    
+    .contact img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    
+    .contact h1 {
+        font-size: 36px;
+        color: #ff4d6d;
+        margin-top: 20px;
+    }
+    
+    .contact p {
+        font-size: 18px;
+        color: #444;
+        margin: 10px 0;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .nav-menu {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    
+        .nav-menu li {
+            margin: 10px 0;
+        }
+    
+        .contact h1 {
+            font-size: 28px;
+        }
+    
+        .contact img {
+            width: 90%;
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1 class="logo">Cake Shop</h1>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('order') }}">Order</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="contact">
+        <img src="https://th.bing.com/th/id/OIP.zC35B2ne3dEGYXW4JKu9cgHaEK?w=314&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Delicious Cake">
+        <h1>Contact Us</h1>
+        <p>Phone: 7906514084</p>
+        <p>Email: shakyasunil672@gmail.com</p>
+    </section>
+</body>
+</html>

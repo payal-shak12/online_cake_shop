@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cake Shop</title>
+    
+<style>/* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff5f8;
+        text-align: center;
+    }
+    
+    /* Navbar Styling */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ff4d6d;
+        padding: 15px 30px;
+        color: white;
+    }
+    
+    .navbar h1 {
+        margin: 0;
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    
+    .nav-menu li {
+        margin: 0 15px;
+    }
+    
+    .nav-menu li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    
+    .nav-menu li a:hover {
+        color: #ffcad4;
+    }
+    
+    /* Hero Section */
+    .hero {
+        background: url("../images/cake-background.jpg") no-repeat center center/cover;
+        padding: 100px 20px;
+        color: black;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    }
+    
+    .hero h1 {
+        font-size: 48px;
+        margin-bottom: 10px;
+    }
+    
+    .hero p {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .btn {
+        display: inline-block;
+        background-color: #ff4d6d;
+        color: white;
+        padding: 12px 25px;
+        text-decoration: none;
+        font-size: 18px;
+        border-radius: 25px;
+        transition: 0.3s;
+    }
+    
+    .btn:hover {
+        background-color: #ff7a92;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .nav-menu {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    
+        .nav-menu li {
+            margin: 10px 0;
+        }
+    
+        .hero h1 {
+            font-size: 32px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Cake Shop</h1>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+                <li><a href="{{ url_for('order') }}">Order</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+                <li><a href="{{ url_for('signup') }}">Sign Up</a></li>
+                <li><a href="{{ url_for('login') }}">Login</a></li>
+                
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <h1>Welcome to Cake Shop</h1>
+        <p>Delicious cakes for every occasion</p>
+        <a href="{{ url_for('menu') }}" class="btn">Explore Menu</a>
+    </section>
+</body>
+</html>

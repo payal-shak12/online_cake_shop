@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Cake Shop</title>
+<style>/* General Styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fff5f8;
+        text-align: center;
+    }
+    
+    /* Navbar Styling */
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #ff4d6d;
+        padding: 15px 30px;
+        color: white;
+    }
+    
+    .navbar h1 {
+        font-size: 24px;
+        font-weight: bold;
+    }
+    
+    .nav-menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+    }
+    
+    .nav-menu li {
+        margin: 0 15px;
+    }
+    
+    .nav-menu li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        transition: 0.3s;
+    }
+    
+    .nav-menu li a:hover {
+        color: #ffcad4;
+    }
+    
+    /* About Section */
+    .about {
+        max-width: 800px;
+        margin: 40px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        text-align: center;
+    }
+    
+    .about img {
+        width: 100%;
+        max-width: 600px;
+        border-radius: 10px;
+    }
+    
+    .about h1 {
+        color: #ff4d6d;
+        margin-top: 20px;
+        font-size: 26px;
+    }
+    
+    .about p {
+        font-size: 18px;
+        color: #444;
+        line-height: 1.6;
+        text-align: justify;
+        padding: 0 20px;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        .nav-menu {
+            flex-direction: column;
+            margin-top: 10px;
+        }
+    
+        .nav-menu li {
+            margin: 10px 0;
+        }
+    
+        .about {
+            width: 90%;
+        }
+    
+        .about p {
+            font-size: 16px;
+        }
+    }
+    </style>
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <h1>Cake Shop</h1>
+            <ul class="nav-menu">
+                <li><a href="{{ url_for('home') }}">Home</a></li>
+                <li><a href="{{ url_for('menu') }}">Menu</a></li>
+                
+                <li><a href="{{ url_for('order') }}">Order</a></li>
+                <li><a href="{{ url_for('contact') }}">Contact</a></li>
+              
+                
+            </ul>
+        </nav>
+    </header>
+    <section class="about">
+        <img src="https://th.bing.com/th/id/OIP.zC35B2ne3dEGYXW4JKu9cgHaEK?w=314&h=180&c=7&r=0&o=5&dpr=1.1&pid=1.7" alt="Baking Cakes">
+        <h1>Delicious cakes for every occasion!</h1>
+        <p>At cake delight, we believe that every celebrations
+            deservers a touch of sweetness. Established with a passion for
+            backing and a love for crafting  unforgettable moments, our
+            shop has been crafting delicions cakes that bring joy to every 
+            occasion. From classic flavors to custom designs, we combine 
+            premium ingredients, artistry, and a dash of love to make cakes that
+            not only taste amazing but look stunning too.
+            Whether it\rquote s a birthday, wedding, or any special
+            event, we\rquote re here to make your celebrations truly 
+            delightful. At cake delight, your happiness is our
+            recipe for success!
+        </p>
+    </section>
+</body>
+</html>
